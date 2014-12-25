@@ -14,8 +14,9 @@
 		10B235301A498088000CED87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B2352F1A498088000CED87 /* Images.xcassets */; };
 		10B235331A498088000CED87 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B235311A498088000CED87 /* LaunchScreen.xib */; };
 		10B2353F1A498088000CED87 /* CameraManualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B2353E1A498088000CED87 /* CameraManualTests.m */; };
-		10B235491A4980E1000CED87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B235481A4980E1000CED87 /* MapKit.framework */; };
 		10B2354D1A4993F1000CED87 /* CMCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B2354C1A4993F1000CED87 /* CMCameraView.m */; };
+		50FA7F391A4BC2180068FAC0 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA7F381A4BC2180068FAC0 /* AVCamPreviewView.m */; };
+		50FA7F3C1A4BC2230068FAC0 /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,12 @@
 		10B235381A498088000CED87 /* CameraManualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraManualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B2353D1A498088000CED87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B2353E1A498088000CED87 /* CameraManualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraManualTests.m; sourceTree = "<group>"; };
-		10B235481A4980E1000CED87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		10B2354B1A4993F1000CED87 /* CMCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCameraView.h; path = "untitled folder/CMCameraView.h"; sourceTree = "<group>"; };
 		10B2354C1A4993F1000CED87 /* CMCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCameraView.m; path = "untitled folder/CMCameraView.m"; sourceTree = "<group>"; };
+		50FA7F371A4BC2180068FAC0 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		50FA7F381A4BC2180068FAC0 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
+		50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B235491A4980E1000CED87 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +72,6 @@
 		10B235161A498088000CED87 = {
 			isa = PBXGroup;
 			children = (
-				10B235481A4980E1000CED87 /* MapKit.framework */,
 				10B235211A498088000CED87 /* CameraManual */,
 				10B2353B1A498088000CED87 /* CameraManualTests */,
 				10B235201A498088000CED87 /* Products */,
@@ -91,8 +93,7 @@
 				10B2354A1A4993AE000CED87 /* Views */,
 				10B235261A498088000CED87 /* AppDelegate.h */,
 				10B235271A498088000CED87 /* AppDelegate.m */,
-				10B235291A498088000CED87 /* ViewController.h */,
-				10B2352A1A498088000CED87 /* ViewController.m */,
+				50FA7F3D1A4BC2570068FAC0 /* VC */,
 				10B2352C1A498088000CED87 /* Main.storyboard */,
 				10B2352F1A498088000CED87 /* Images.xcassets */,
 				10B235311A498088000CED87 /* LaunchScreen.xib */,
@@ -130,10 +131,23 @@
 		10B2354A1A4993AE000CED87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				50FA7F371A4BC2180068FAC0 /* AVCamPreviewView.h */,
+				50FA7F381A4BC2180068FAC0 /* AVCamPreviewView.m */,
 				10B2354B1A4993F1000CED87 /* CMCameraView.h */,
 				10B2354C1A4993F1000CED87 /* CMCameraView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		50FA7F3D1A4BC2570068FAC0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				10B235291A498088000CED87 /* ViewController.h */,
+				10B2352A1A498088000CED87 /* ViewController.m */,
+				50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */,
+				50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,8 @@
 				10B2354D1A4993F1000CED87 /* CMCameraView.m in Sources */,
 				10B235281A498088000CED87 /* AppDelegate.m in Sources */,
 				10B235251A498088000CED87 /* main.m in Sources */,
+				50FA7F391A4BC2180068FAC0 /* AVCamPreviewView.m in Sources */,
+				50FA7F3C1A4BC2230068FAC0 /* AVCamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CameraManual/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -374,7 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CameraManual/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -433,6 +449,7 @@
 				10B235441A498088000CED87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10B235451A498088000CED87 /* Build configuration list for PBXNativeTarget "CameraManualTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +458,7 @@
 				10B235471A498088000CED87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
