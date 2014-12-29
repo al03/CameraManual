@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101742EA1A518DFE005DD851 /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101742E91A518DFE005DD851 /* AAPLCameraViewController.m */; };
+		101742ED1A518E05005DD851 /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 101742EC1A518E05005DD851 /* AAPLPreviewView.m */; };
 		10B235251A498088000CED87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B235241A498088000CED87 /* main.m */; };
 		10B235281A498088000CED87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B235271A498088000CED87 /* AppDelegate.m */; };
 		10B2352B1A498088000CED87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B2352A1A498088000CED87 /* ViewController.m */; };
@@ -30,13 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101742E81A518DFE005DD851 /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewController.h; sourceTree = "<group>"; };
+		101742E91A518DFE005DD851 /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
+		101742EB1A518E05005DD851 /* AAPLPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPreviewView.h; sourceTree = "<group>"; };
+		101742EC1A518E05005DD851 /* AAPLPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPreviewView.m; sourceTree = "<group>"; };
 		10B2351F1A498088000CED87 /* CameraManual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraManual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B235231A498088000CED87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B235241A498088000CED87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10B235261A498088000CED87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10B235271A498088000CED87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10B235291A498088000CED87 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		10B2352A1A498088000CED87 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		10B235291A498088000CED87 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		10B2352A1A498088000CED87 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		10B2352D1A498088000CED87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10B2352F1A498088000CED87 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		10B235321A498088000CED87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,8 +53,8 @@
 		10B2354C1A4993F1000CED87 /* CMCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCameraView.m; path = "untitled folder/CMCameraView.m"; sourceTree = "<group>"; };
 		50FA7F371A4BC2180068FAC0 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
 		50FA7F381A4BC2180068FAC0 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
-		50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
-		50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
+		50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCamViewController.h; path = ../AVCamViewController.h; sourceTree = "<group>"; };
+		50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCamViewController.m; path = ../AVCamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101742E71A518DE2005DD851 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				101742E81A518DFE005DD851 /* AAPLCameraViewController.h */,
+				101742E91A518DFE005DD851 /* AAPLCameraViewController.m */,
+				10B235291A498088000CED87 /* ViewController.h */,
+				10B2352A1A498088000CED87 /* ViewController.m */,
+				50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */,
+				50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		10B235161A498088000CED87 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +112,7 @@
 				10B2354A1A4993AE000CED87 /* Views */,
 				10B235261A498088000CED87 /* AppDelegate.h */,
 				10B235271A498088000CED87 /* AppDelegate.m */,
-				50FA7F3D1A4BC2570068FAC0 /* VC */,
+				101742E71A518DE2005DD851 /* VC */,
 				10B2352C1A498088000CED87 /* Main.storyboard */,
 				10B2352F1A498088000CED87 /* Images.xcassets */,
 				10B235311A498088000CED87 /* LaunchScreen.xib */,
@@ -131,23 +150,14 @@
 		10B2354A1A4993AE000CED87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				101742EB1A518E05005DD851 /* AAPLPreviewView.h */,
+				101742EC1A518E05005DD851 /* AAPLPreviewView.m */,
 				50FA7F371A4BC2180068FAC0 /* AVCamPreviewView.h */,
 				50FA7F381A4BC2180068FAC0 /* AVCamPreviewView.m */,
 				10B2354B1A4993F1000CED87 /* CMCameraView.h */,
 				10B2354C1A4993F1000CED87 /* CMCameraView.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		50FA7F3D1A4BC2570068FAC0 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				10B235291A498088000CED87 /* ViewController.h */,
-				10B2352A1A498088000CED87 /* ViewController.m */,
-				50FA7F3A1A4BC2230068FAC0 /* AVCamViewController.h */,
-				50FA7F3B1A4BC2230068FAC0 /* AVCamViewController.m */,
-			);
-			name = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +267,8 @@
 				10B235251A498088000CED87 /* main.m in Sources */,
 				50FA7F391A4BC2180068FAC0 /* AVCamPreviewView.m in Sources */,
 				50FA7F3C1A4BC2230068FAC0 /* AVCamViewController.m in Sources */,
+				101742EA1A518DFE005DD851 /* AAPLCameraViewController.m in Sources */,
+				101742ED1A518E05005DD851 /* AAPLPreviewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +394,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a4242bb5-f4ec-4df5-b1b4-578fcc1bb9cf";
 			};
 			name = Debug;
 		};
@@ -393,6 +406,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a4242bb5-f4ec-4df5-b1b4-578fcc1bb9cf";
 			};
 			name = Release;
 		};
