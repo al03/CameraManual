@@ -176,6 +176,7 @@ static float EXPOSURE_MINIMUM_DURATION = 1.0/1000; // Limit exposure duration to
 		{
 			[session addInput:audioDeviceInput];
 		}
+*/
 //movie output
 		AVCaptureMovieFileOutput *movieFileOutput = [[AVCaptureMovieFileOutput alloc] init];
 		if ([session canAddOutput:movieFileOutput])
@@ -188,7 +189,7 @@ static float EXPOSURE_MINIMUM_DURATION = 1.0/1000; // Limit exposure duration to
 			}
 			[self setMovieFileOutput:movieFileOutput];
 		}
-*/
+
 		
 		AVCaptureStillImageOutput *stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
 		if ([session canAddOutput:stillImageOutput])
@@ -480,6 +481,40 @@ static float EXPOSURE_MINIMUM_DURATION = 1.0/1000; // Limit exposure duration to
 	{
 		NSLog(@"%@", error);
 	}
+}
+
+- (IBAction)toZero:(id)sender {
+    
+    self.lensPositionSlider.enabled = NO;
+    
+   [UIView animateKeyframesWithDuration:1 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+       NSError *error = nil;
+       if ([self.videoDevice lockForConfiguration:&error]) {
+           [self.videoDevice setFocusModeLockedWithLensPosition:0.0f completionHandler:nil];
+           self.lensPositionSlider.value = self.videoDevice.lensPosition;
+       }else{
+           NSLog(@"%@", error);
+       }
+   } completion:^(BOOL finished) {
+       self.lensPositionSlider.enabled = YES;
+   }];
+    
+}
+
+- (IBAction)toInfinity:(id)sender {
+    self.lensPositionSlider.enabled = NO;
+    
+    [UIView animateKeyframesWithDuration:1 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+        NSError *error = nil;
+        if ([self.videoDevice lockForConfiguration:&error]) {
+            [self.videoDevice setFocusModeLockedWithLensPosition:1.0f completionHandler:nil];
+            self.lensPositionSlider.value = self.videoDevice.lensPosition;
+        }else{
+            NSLog(@"%@", error);
+        }
+    } completion:^(BOOL finished) {
+        self.lensPositionSlider.enabled = YES;
+    }];
 }
 
 - (IBAction)changeExposureDuration:(id)sender
