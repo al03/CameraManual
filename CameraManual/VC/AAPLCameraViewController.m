@@ -483,27 +483,12 @@ static float EXPOSURE_MINIMUM_DURATION = 1.0/1000; // Limit exposure duration to
 		NSLog(@"%@", error);
 	}
 }
-
+//0.000000
 - (IBAction)toZero:(id)sender {
     
-//    self.lensPositionSlider.enabled = NO;
-    
-//   [UIView animateKeyframesWithDuration:3 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
-//       NSError *error = nil;
-//       if ([self.videoDevice lockForConfiguration:&error]) {
-//           [self.videoDevice setFocusModeLockedWithLensPosition:0.0f completionHandler:nil];
-//           self.lensPositionSlider.value = self.videoDevice.lensPosition;
-//           NSLog(@"ppp is %f", self.videoDevice.lensPosition);
-//       }else{
-//           NSLog(@"%@", error);
-//       }
-//   } completion:^(BOOL finished) {
-//       self.lensPositionSlider.enabled = YES;
-//   }];
-    
+    self.lensPositionSlider.enabled = NO;
     
     PRTweenPeriod *period = [PRTweenPeriod periodWithStartValue:1 endValue:0 duration:3];
-    
     PRTweenOperation *operation = [[PRTween sharedInstance] addTweenPeriod:period target:self selector:@selector(update:) timingFunction:&PRTweenTimingFunctionCircOut];
     
 }
@@ -512,18 +497,22 @@ static float EXPOSURE_MINIMUM_DURATION = 1.0/1000; // Limit exposure duration to
 {
     NSError *error = nil;
     if ([self.videoDevice lockForConfiguration:&error]) {
+        if (period.tweenedValue < 0.000001 || (1.0 - period.tweenedValue) < 0.000001) {
+            NSLog(@"ppp is %f", self.videoDevice.lensPosition);
+            self.lensPositionSlider.enabled = YES;
+        }
         [self.videoDevice setFocusModeLockedWithLensPosition:period.tweenedValue completionHandler:nil];
         self.lensPositionSlider.value = self.videoDevice.lensPosition;
-        NSLog(@"ppp is %f", self.videoDevice.lensPosition);
+        
     }else{
         NSLog(@"%@", error);
     }
-}
-
-- (IBAction)toInfinity:(id)sender {
- //   self.lensPositionSlider.enabled = NO;
     
 
+}
+//∞ 1.000000
+- (IBAction)toInfinity:(id)sender {
+    self.lensPositionSlider.enabled = NO;
     
     PRTweenPeriod *period = [PRTweenPeriod periodWithStartValue:0 endValue:1 duration:3];
     
